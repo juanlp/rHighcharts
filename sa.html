@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+<style type="text/css">
+.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+},
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		 <script type='text/javascript' src="https://rawgithub.com/morr/jquery.appear/master/jquery.appear.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+
+	</head>
+	<body>
+<script src=\"http://code.highcharts.com/highcharts.js\"></script>
+<script src=\"http://code.highcharts.com/highcharts-more.js\"></script>
+<script src=\"http://code.highcharts.com/modules/exporting.js\"></script>
+<script type=\"text/javascript\">
+      $(function () {
+      	(function (H) {
+      		function deferRender (proceed) {
+      			var series = this,
+      				$renderTo = $(this.chart.container.parentNode);
+
+      			// It is appeared, render it
+      			if ($renderTo.is(\':appeared\')) {
+      				proceed.call(series);
+
+      			// It is not appeared, halt renering until appear
+      			} else  {
+      				$renderTo.appear(); // Initialize appear plugin
+      				$renderTo.on(\'appear\', function () {
+      					proceed.call(series);
+      				});
+      			}
+      		};
+
+      		H.wrap(H.Series.prototype, \'render\', deferRender);
+
+      	}(Highcharts));
+          $(\'#container\').highcharts({
+              chart: {
+                  type: \'pie\',
+                  options3d: {
+                      enabled: true,
+                      alpha: 45,
+                      beta: 0
+                  }
+              },
+              title: {
+                  text: \'Browser market shares at a specific website, 2014\'
+              },      tooltip: {
+                  pointFormat: \'{series.name}: <b>{point.percentage:.1f}%</b>\'
+              },
+              plotOptions: {
+                  pie: {
+                      allowPointSelect: true,
+                      cursor: \'pointer\',
+                      depth: 35,
+                      dataLabels: {
+                          enabled: true,
+                          format: \'{point.name}\'
+                      }
+                  }
+              },
+              series: [{
+                  type: \'pie\',
+                  name: \'Browser share\',
+                  data: [
+                      [\'Firefox\',   45.0],
+                      [\'IE\',       26.8],
+                      {
+                          name: \'Chrome\',
+                          y: 12.8,
+                          sliced: true,
+                          selected: true
+                      },
+                      [\'Safari\',    8.5],
+                      [\'Opera\',     6.2],
+                      [\'Others\',   0.7]
+                  ]
+              }]
+          });
+      });
+</script>
+<div id=\"container\" style=\"height: 400px\"></div>
+            '))
+
+	</body>
+</html>
