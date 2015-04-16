@@ -38,7 +38,7 @@ Highcharts.theme = {
 		tickColor: '#999',
 		labels: {
 			style: {
-				color: '#999',
+				color: '#fff',
 				fontWeight: 'normal'
 			}
 		},
@@ -58,13 +58,13 @@ Highcharts.theme = {
 		tickWidth: 0,
 		labels: {
 			style: {
-				color: '#999',
+				color: '#fff',
 				fontWeight: 'normal'
 			}
 		},
 		title: {
 			style: {
-				color: '#AAA',
+				color: '#fff',
 				font: '12px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
 			}
 		}
@@ -82,7 +82,7 @@ Highcharts.theme = {
 	},
 	labels: {
 		style: {
-			color: '#CCC'
+			color: '#fff'
 		}
 	},
 	tooltip: {
