@@ -4,7 +4,7 @@
  */
  
 Highcharts.theme = {
-	colors: ["#DDDF0D", "#7798BF", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
+	colors: ["#CC9900", "#999999", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
 		"#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
 	chart: {
 		backgroundColor: {
@@ -23,13 +23,13 @@ Highcharts.theme = {
 	title: {
 		style: {
 			color: '#FFF',
-			font: '16px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+			font: '16px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
 		}
 	},
 	subtitle: {
 		style: {
 			color: '#DDD',
-			font: '12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+			font: '12px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
 		}
 	},
 	xAxis: {
@@ -39,13 +39,13 @@ Highcharts.theme = {
 		labels: {
 			style: {
 				color: '#999',
-				fontWeight: 'bold'
+				fontWeight: 'normal'
 			}
 		},
 		title: {
 			style: {
 				color: '#AAA',
-				font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+				font: '12px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
 			}
 		}
 	},
@@ -59,13 +59,13 @@ Highcharts.theme = {
 		labels: {
 			style: {
 				color: '#999',
-				fontWeight: 'bold'
+				fontWeight: 'normal'
 			}
 		},
 		title: {
 			style: {
 				color: '#AAA',
-				font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+				font: '12px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
 			}
 		}
 	},
@@ -163,7 +163,7 @@ Highcharts.theme = {
 			stroke: '#000000',
 			style: {
 				color: '#CCC',
-				fontWeight: 'bold'
+				fontWeight: 'normal'
 			},
 			states: {
 				hover: {
