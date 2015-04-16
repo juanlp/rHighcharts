@@ -23,7 +23,7 @@ Highcharts.theme = {
 	title: {
 		style: {
 			color: '#FFF',
-			padding-top: '5px',
+			padding: '5px 5px 5px 5px',
 			font: '20px Roboto, sans-serif'
 		}
 	},
