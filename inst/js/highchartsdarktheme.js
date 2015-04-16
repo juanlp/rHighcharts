@@ -23,13 +23,13 @@ Highcharts.theme = {
 	title: {
 		style: {
 			color: '#FFF',
-			font: '16px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+			font: '22px Roboto, sans-serif'
 		}
 	},
 	subtitle: {
 		style: {
 			color: '#DDD',
-			font: '12px Roboto, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+			font: '12px Roboto, sans-serif'
 		}
 	},
 	xAxis: {
